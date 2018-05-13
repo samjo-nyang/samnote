@@ -1,0 +1,15 @@
+root: true
+env:
+  browser: true
+parserOptions:
+  parser: babel-eslint
+extends:
+  - airbnb
+  - plugin:vue/recommended
+plugins:
+  - vue
+  - import
+rules:
+  max-len: off
+  import/extensions: off
+  import/no-unresolved: off
