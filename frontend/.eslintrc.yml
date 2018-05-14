@@ -13,3 +13,4 @@ rules:
   max-len: off
   import/extensions: off
   import/no-unresolved: off
+  no-mixed-operators: off
