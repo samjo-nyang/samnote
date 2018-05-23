@@ -20,6 +20,11 @@
       <div class="title">
         <h1>SAMNOTE <small>v20180513</small></h1>
       </div>
+      <div class="links">
+        <el-button
+          class="resume"
+          @click="navigate('info.samjo.me')">Resume</el-button>
+      </div>
       <p class="copyright">Designed By Sam Jo</p>
     </div>
   </div>
@@ -27,9 +32,9 @@
 
 <script>
 import SunCalc from 'suncalc';
-import grassUrl from '~/assets/home/grass.png';
-import treeUrl from '~/assets/home/tree.png';
-import STAR_SPEC from './index.star.js';
+import grassUrl from '@/assets/home/grass.png';
+import treeUrl from '@/assets/home/tree.png';
+import STAR_SPEC from '@/assets/home/star.js';
 
 const HEADER_GRADIENT = {
   day: '#479fd9, #bbffff',
@@ -113,6 +118,9 @@ export default {
         + date.getMinutes() / 60
         + date.getSeconds() / 3600;
     },
+    navigate(url) {
+      window.location.href = `https://${url}`;
+    },
   },
 };
 </script>
@@ -160,6 +168,11 @@ export default {
   }
 }
 
+.links {
+  margin: 10px 0;
+  text-align: center;
+}
+
 .copyright {
   color: #aaa;
   text-align: right;
@@ -187,6 +200,17 @@ export default {
   }
   .title h1 {
     font-size: 2.5rem;
+  }
+}
+
+.el-button.resume {
+  background: rgba(0, 0, 0, 0);
+  border-color: white;
+  color: white;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
   }
 }
 </style>

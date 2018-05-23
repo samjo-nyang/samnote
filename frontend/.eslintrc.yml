@@ -12,5 +12,6 @@ plugins:
 rules:
   max-len: off
   import/extensions: off
+  import/no-extraneous-dependencies: off
   import/no-unresolved: off
   no-mixed-operators: off

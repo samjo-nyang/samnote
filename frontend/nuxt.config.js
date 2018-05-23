@@ -1,6 +1,6 @@
 module.exports = {
   head: {
-    title: 'Sam Note',
+    title: 'SamNote',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -8,9 +8,18 @@ module.exports = {
     ],
   },
   loading: { color: '#3B8070' },
+  css: [
+    'element-ui/lib/theme-chalk/index.css',
+  ],
+  plugins: [
+    '@/plugins/element-ui',
+  ],
+  mode: 'spa',
   build: {
+    extractCSS: true,
     extend(config, { isDev, isClient }) {
       if (!config.module.loaders) {
+        // eslint-disable-next-line
         config.module.loaders = [];
       }
       config.module.loaders.push({
