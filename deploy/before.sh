@@ -2,7 +2,7 @@
 
 DIR_CURRENT="$(dirname "$0")"
 DIR_BASE="$DIR_CURRENT/../"
-DIR_DEPLOY="$DIR_BASE/../deploy/"
+DIR_DEPLOY="$DIR_BASE/tmp-deploy/"
 
 if [ -z "$DIR_DEPLOY" ]; then
   mkdir $DIR_DEPLOY

@@ -23,7 +23,7 @@ deploy:
   bucket: samnote-deploy
   skip_cleanup: true
   upload-dir: main
-  local-dir: ../deploy
+  local-dir: tmp-deploy
 env:
   global:
   - secure: la6k8dlKvlRv402idv3iu1d4Fz5LePpYE2LYRLdba27UmsMdYRaXiDOgXwP/n5c0ivIwTBjtmjQNBPkPeqyHHstkMgTUCtt2GbXTNFn7/4MQf3jiog1zVBPR2KK7pNRVTrNIrYYypNPv7lL2PtP9+O9paXL9JCgAmL7yeSXVndqa0hDG/0ry4BcoanFcTI/IphQ4tCViBr4fqIumoDsoqMk/uuWPnkhapzBl5wjwI6Bm4GxHMkT6kDwvo5+zaoY57R9vs+YdY7czDD93j2oaGqeaG480685yLh/yziiGZrRY/88r2ES3ywg2Ht2KcRIfC2p0TTo9MZem0plxRPnKTvcElQHXmz0s+kkg2Lz+X1Gjdn0YDhNRvEJFOgelJDRJPIXRbM2pYvfgr+XbTExvY3RBgu2kDVZOOPmaDOl3Kl9aT9Gq5+3vfPj5o+fiDCX3/J6Ip1nUJXhp3zctD5aPeCSKGUy03i3d8pkePws/a8dtaqAsiSblLGA4xMJfnTxfSak5dbozE2stqDRw9JwbCld4B4T9LOYCBPtJ8+jMXnwpCCgtfrBipVIOvFrgCPT00Rrny7PTzX17qvKQjSGSrXezTHq+yYpKlV+JDznbW0QZWBFsSqkOL55ZWk7r4h9jcbEsCOwDSlkG7sBP2rTs18RAjBeDrHGRFryrKZ/trL0=
