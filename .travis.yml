@@ -3,11 +3,24 @@ node_js: 9
 cache:
   yarn: true
   directories:
-    - frontend/node_modules
+  - frontend/node_modules
 before_install:
-  - cd frontend/
+- cd frontend/
 install:
-  - yarn install
+- yarn install
 script:
-  - yarn lint
-  - yarn build
+- yarn lint
+- yarn build
+before_deploy:
+  - deploy/before.sh
+deploy:
+  provider: s3
+  access_key_id: ACCESS_KEY_ID
+  secret_access_key: SECRET_ACCESS_KEY
+  bucket: samnote-deploy
+  skip_cleanup: true
+  upload-dir: main
+env:
+  global:
+  - secure: la6k8dlKvlRv402idv3iu1d4Fz5LePpYE2LYRLdba27UmsMdYRaXiDOgXwP/n5c0ivIwTBjtmjQNBPkPeqyHHstkMgTUCtt2GbXTNFn7/4MQf3jiog1zVBPR2KK7pNRVTrNIrYYypNPv7lL2PtP9+O9paXL9JCgAmL7yeSXVndqa0hDG/0ry4BcoanFcTI/IphQ4tCViBr4fqIumoDsoqMk/uuWPnkhapzBl5wjwI6Bm4GxHMkT6kDwvo5+zaoY57R9vs+YdY7czDD93j2oaGqeaG480685yLh/yziiGZrRY/88r2ES3ywg2Ht2KcRIfC2p0TTo9MZem0plxRPnKTvcElQHXmz0s+kkg2Lz+X1Gjdn0YDhNRvEJFOgelJDRJPIXRbM2pYvfgr+XbTExvY3RBgu2kDVZOOPmaDOl3Kl9aT9Gq5+3vfPj5o+fiDCX3/J6Ip1nUJXhp3zctD5aPeCSKGUy03i3d8pkePws/a8dtaqAsiSblLGA4xMJfnTxfSak5dbozE2stqDRw9JwbCld4B4T9LOYCBPtJ8+jMXnwpCCgtfrBipVIOvFrgCPT00Rrny7PTzX17qvKQjSGSrXezTHq+yYpKlV+JDznbW0QZWBFsSqkOL55ZWk7r4h9jcbEsCOwDSlkG7sBP2rTs18RAjBeDrHGRFryrKZ/trL0=
+  - secure: x/rIYiJ+wRVhzgugFtIGSBlrXS4n9nkcetHcS17zzhnT8Ql34iYjyiaIlMbpyMMTOovCzHpApIIDM149E5+S+D3ID5JNO34uiY5fgpZKc+1HXdD99L6tQ0/XeabaD3Tz+NodcNUps2sEofmpmSFOd+rbPlMh+snfFVWY3Y0mX6eRw7frmhhEvff0fkb5eKHBv5CIg04zyANbTabjTM4FmndI0FwAC2Rhs5VWQaHdgsIj/auLlEeDG62bKHONvq8HLaQ7lAwnr1Wiie+7abKiSYrRU1ZFHp/gponzTwRQz0OrGfJv4U6km4LPM6WiYyYStkSbkw/vYzFH6B0N6VFbw7bYHwq43H6NanWxlEiiFqV23K2jFv2AljKybaBfTedM9GUab6Gu4w7sGlSzSJXLpaqPVlAjnqrs80CjjyZfl4hN4U+yed6yBed+SXBMKiLwfLHZ736Zc6PIf4Dxwm5D8coNk928/BDpHCnGj5/27WV4BvcbnC1XKN18b39EQki7+lAku6E3+DUigAxe5qZNxEe1IYenI0K77EYaSDY27aMAPkhJuFeD+DG1A6MU5yIWlv1xOkEtuqwIKPvPH8EglNYUYOcRZJvGi/HI5PPGtdPbQZmoMamk927SfwnRVHbN51jAfYIDc1OGqQNKJydy/Bysh9mqMEugu3IZDhGTuZk=

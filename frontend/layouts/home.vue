@@ -12,10 +12,16 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  min-width: 330px;
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+html, body, #__nuxt, #__layout {
+  height: 100%;
+  min-height: 100%;
 }
 </style>
