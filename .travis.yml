@@ -4,13 +4,15 @@ cache:
   yarn: true
   directories:
   - frontend/node_modules
-before_install:
-- cd frontend/
 install:
+- cd frontend/
 - yarn install
+- cd ../
 script:
+- cd frontend/
 - yarn lint
 - yarn build
+- cd ../
 before_deploy:
   - deploy/before.sh
 deploy:
