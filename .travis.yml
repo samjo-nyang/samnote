@@ -25,6 +25,6 @@ deploy:
   bucket: samnote-deploy
   skip_cleanup: true
   upload-dir: main
-  local-dir: tmp-deploy
+  local-dir: tmp-upload
 notifications:
   email: false
