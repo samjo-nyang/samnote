@@ -27,6 +27,7 @@ deploy:
 - provider: codedeploy
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
+  region: ap-northeast-2
   bucket: samnote-deploy
   key: main/$TRAVIS_COMMIT.zip
   application: samnote
