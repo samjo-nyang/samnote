@@ -5,5 +5,5 @@ files:
     destination: /data/deploy/samnote/
 hooks:
   AfterInstall:
-    - location: deploy/codedeploy_after_install.sh
+    - location: codedeploy_after_install.sh
       runas: root
