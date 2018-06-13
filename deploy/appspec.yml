@@ -6,3 +6,4 @@ files:
 hooks:
   AfterInstall:
     - location: deploy/codedeploy_after_install.sh
+      runas: root
