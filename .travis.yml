@@ -16,7 +16,7 @@ script:
 before_deploy:
 - deploy/travis_before_deploy.sh
 deploy:
-  provider: s3
+- provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   region: ap-northeast-2
@@ -24,5 +24,12 @@ deploy:
   skip_cleanup: true
   upload-dir: main
   local-dir: tmp-upload
+- provider: codedeploy
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: samnote-deploy
+  key: main/$TRAVIS_COMMIT.zip
+  application: samnote
+  deployment_group: master
 notifications:
   email: false
