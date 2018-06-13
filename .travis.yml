@@ -14,7 +14,7 @@ script:
 - yarn build
 - cd ../
 before_deploy:
-- deploy/before.sh
+- deploy/travis_before_deploy.sh
 deploy:
   provider: s3
   access_key_id:
@@ -26,3 +26,5 @@ deploy:
   skip_cleanup: true
   upload-dir: main
   local-dir: tmp-deploy
+notifications:
+  email: false

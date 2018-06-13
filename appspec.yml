@@ -1,0 +1,8 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /data/deploy/samnote/
+hooks:
+  AfterInstall:
+    - location: deploy/codedeploy_after_install.sh
