@@ -18,12 +18,12 @@
     </div>
     <div id="content">
       <div class="title">
-        <h1>SAMNOTE <small>v20180513</small></h1>
+        <h1>SAMNOTE <small>v20210225</small></h1>
       </div>
       <div class="links">
         <el-button
           class="resume"
-          @click="navigate('info.samjo.me')">Resume</el-button>
+          @click="navigate('info.samjo.dev')">Resume</el-button>
       </div>
       <p class="copyright">Designed By Sam Jo</p>
     </div>

@@ -1,3 +1,3 @@
 # samnote
 
-- source of [www.samjo.me](https://www.samjo.me/)
+- source of [www.samjo.dev](https://www.samjo.dev/)
